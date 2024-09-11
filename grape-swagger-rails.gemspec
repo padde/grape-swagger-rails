@@ -15,7 +15,11 @@ Gem::Specification.new do |spec|
   spec.license       = 'MIT'
   spec.files         = `git ls-files`.split($INPUT_RECORD_SEPARATOR)
   spec.require_paths = %w[lib]
-  spec.add_dependency 'railties', '>= 6.0.6.1'
+
+  rails_version = ENV.fetch('RAILS_VERSION', '>= 6.0.6.1')
+  rails_version = '>= 0' if rails_version == 'edge'
+  spec.add_dependency 'railties', rails_version
+
   spec.metadata = {
     'bug_tracker_uri' => 'https://github.com/ruby-grape/grape-swagger-rails/issues',
     'changelog_uri' => 'https://github.com/ruby-grape/grape-swagger-rails/blob/master/CHANGELOG.md',

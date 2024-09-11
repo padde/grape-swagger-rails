@@ -1,5 +1,6 @@
 ### 0.5.1 (Next)
 
+* [#0](https://github.com/ruby-grape/grape-swagger-rails/pull/TODO): Add rails versions to CI matrix - [@padde](https://github.com/padde).
 * Your contribution here.
  
 ### 0.5.0 (2024/04/06)
